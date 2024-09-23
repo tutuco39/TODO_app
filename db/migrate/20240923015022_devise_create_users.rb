@@ -2,6 +2,7 @@
 
 class DeviseCreateUsers < ActiveRecord::Migration[7.2]
   def change
+    add_reference :board
     create_table :users do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
